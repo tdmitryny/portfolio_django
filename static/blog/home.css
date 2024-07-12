@@ -1,0 +1,116 @@
+.header{
+    background-color: #2766c3;
+  
+}
+
+.header__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9rem;
+
+}
+
+
+.header__menu{
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: 'Jura', sans-serif;
+  width: 100%;
+  padding-right: 4rem;
+  
+}
+
+/* Header */
+.header__menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__menu-lists{
+    display: flex;
+    gap: 2rem;
+}
+  
+.header__list{
+    list-style: none;
+    cursor: pointer;
+    padding: 0 1rem 1rem 0;
+    cursor: pointer;
+    position: relative;
+}
+  
+  
+.header__list::after{
+    position: absolute;
+    content: '';
+    width: 94%;
+    height: 4px;
+    background-color: #88EA85;
+    bottom: 0;
+    left: 0%;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+  
+}
+  
+.header__list:hover:after{
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  
+}
+  
+.header__menu{
+    width: 200rem;
+}
+
+.header__menu-lists{
+    display: flex;
+    gap: 1rem;
+}
+
+.header__menu-lists:first-child{
+    padding-left: 1.5rem;
+}
+  
+.header__list:nth-child(2){
+    width: 21rem;
+}
+  
+.green__number{
+    color: #88EA85;
+    padding-right: 0.5rem;
+}
+  
+
+
+/* Button resume */
+.btn__header{
+    width: 26.8rem;
+    height: 4.2rem;
+    border: 0.2rem solid #C9F6C8;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.btn__header p{
+    display: block;
+    font-family: 'Jura', sans-serif;
+    font-size: 1.5rem;
+    
+    cursor: pointer;
+    
+  
+}

@@ -8,7 +8,8 @@
     <!-- Add your CSS and JavaScript files here -->
     {% load static %}
     {% block head %}
-        <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+        <link rel="stylesheet" href="{% static 'blog/general.css' %}">
+        <link rel="stylesheet" href="{% static 'blog/home.css' %}">
     {% endblock %}
     
 </head>
@@ -16,21 +17,21 @@
 <section class="header">
     <header class="container header__inner">
         <div class="logo">
-            <span>DMITRYDEV</span>
+            <span>DMITRYsssDEV</span>
         </div>
         
         
         <nav class="header__menu">
             <ul class="header__menu-lists">
-                <li class="header__list">
+                <li class="list">
                     <span class="green__number">0.1</span>
                     <a href="{% url 'home' %}">Home</a>
                 </li>
-                <li class="header__list">
+                <li class="list">
                     <span class="green__number">0.2</span>
                     <a href="{% url 'post' %}">Post</a>
                 </li>
-                <li class="header__list">
+                <li class="list">
                     <span class="green__number">0.3</span>
                     <a href="#">About</a>
                 </li>
@@ -47,13 +48,19 @@
                     <a href="#">Work</a>
                 </li>
                 <li class="header__list">
-                    <span class="green__number">0.6</span>
+                    <span class="green__number">0.7</span>
                     <a href="#">Contact</a>
                 </li>
                 
             </ul>
         </nav>
+
+        <a class="btn__header" href="#" download="resume" target="__blank" rel="noreferrer">
+            <p>Download Resume</p>  
+         </a>
     </header>
+
+    
 </section>
     {% block content %}
     {% endblock %}
