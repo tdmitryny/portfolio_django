@@ -14,24 +14,25 @@
     
 </head>
 <body>
+
 <section class="header">
     <header class="container header__inner">
         <div class="logo">
-            <span>DMITRYsssDEV</span>
+            <img src={% static "images/logo_2.png" %}>
         </div>
         
         
         <nav class="header__menu">
             <ul class="header__menu-lists">
-                <li class="list">
+                <li class="header__list">
                     <span class="green__number">0.1</span>
                     <a href="{% url 'home' %}">Home</a>
                 </li>
-                <li class="list">
+                <li class="header__list">
                     <span class="green__number">0.2</span>
                     <a href="{% url 'post' %}">Post</a>
                 </li>
-                <li class="list">
+                <li class="header__list">
                     <span class="green__number">0.3</span>
                     <a href="#">About</a>
                 </li>
@@ -62,7 +63,32 @@
 
     
 </section>
+<main class="container">
     {% block content %}
     {% endblock %}
-</body>
+</main>
+
+<footer class="container footer">
+    <div class="footer__inner">
+        <div class="footer__icons">
+            <a href="https://www.linkedin.com/in/john-doe-123456789/" target="__blank" rel="noreferrer">
+                <img src={% static "images/linkedin.svg" %}>
+            </a>
+            <a href="https://www.linkedin.com/in/john-doe-123456789/" target="__blank" rel="noreferrer">
+                <img src={% static "images/instagram.svg" %}>
+            </a>
+            <a href="https://www.linkedin.com/in/john-doe-123456789/" target="__blank" rel="noreferrer">
+                <img src={% static "images/github.svg" %}>
+            </a>
+        </div>
+        <div class="footer__copy">
+            <p>©2021 Design by Dmitry Tsuverkalov</p>
+        </div>
+
+        <div class="footer__rights">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </div>
+</footer>
 </html>

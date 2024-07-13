@@ -1,7 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
 .header{
-    background-color: #2766c3;
+    background-color: #0A192F;
   
 }
+
+.logo {
+    width: 70%; 
+    cursor: pointer;
+  }
 
 .header__inner{
   display: flex;
@@ -36,10 +44,12 @@
     list-style: none;
     cursor: pointer;
     padding: 0 1rem 1rem 0;
-    cursor: pointer;
     position: relative;
 }
-  
+
+.header__list a{
+    color: #ffffff;
+}
   
 .header__list::after{
     position: absolute;
@@ -79,13 +89,13 @@
     padding-left: 1.5rem;
 }
   
-.header__list:nth-child(2){
+/* .header__list:nth-child(2){
     width: 21rem;
-}
+} */
   
 .green__number{
     color: #88EA85;
-    padding-right: 0.5rem;
+    padding-right: 0.0rem;
 }
   
 
@@ -113,4 +123,19 @@
     cursor: pointer;
     
   
+}
+
+
+/* Footer */
+
+.footer__inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+
+.footer__rights,
+.footer__copy{
+    padding-top: 1rem;
 }
