@@ -1,15 +1,75 @@
 {% extends 'base.html' %}
 
-
+{% load static %}
 
 
 {% block content %}
-    
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="fonr">Welcome ssto my portfolio!</h2>
-                <p>My name is John Doe and I am a web developer.</p>
+    {% comment %} Hero section {% endcomment %}
+<section class="hero">
+    <div class="container">
+        <div class="hero__inner">
+            <span class="hero__welcome">Hello 👋🏻, I’m </span>
+            <h2 class='hero__name'>Dmitry,</h2>
+                    <p class='hero__do'><span>SWE</span> turned <span class='hero__underline'>Data Engineer</span> and 
+                    <span class='container-flip'> 
+                        <span class='flip flip-optimizer'>Data Analyst📊.</span>
+                        <span class='flip flip-designer'>UX/UI Designer🧑‍🎨.</span> 
+                        <span class='flip flip-analytics'>Web Developer🧑‍💻.</span> 
+                        <span class='flip flip-optimizer'>Digital Marketer📊.</span> 
+                        <span class="flip flip-kayking">Kayaking. 🛶</span>
+                        <span class="flip flip-booknerd">Book Nerd. 📚</span>
+                        <span class="flip flip-car">Porsche Enthusiast. 🏎💨</span>
+                        <span class="flip flip-catdad">Cat Dad. 🐈</span>
+                    </span>
+                    </p>
+                <p class='hero__about'>My profound passion for Azure cloud computing and programming is complemented by a solid foundation in problem-solving, data analysis, and strategic thinking skills. I excel at analyzing complex systems, scripting, automation, and implementing efficient solutions to optimize cloud-based platforms. </p>
+                <a class='hero__btn' href="#">See My Portfolio</a>
+                <div class='cert'>
+                    <img class='cert__img' src="{% static "images/az900.png" %}" alt="az900" />
+                    <img class='cert__img' src="{% static "images/az104.png" %}" alt="az104" />
+                    <img class='cert__img' src="{% static "images/az400.png" %}" alt="az400" />
+                </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class='about'>
+        <div class='about__inner'>
+            <div class='about__first'>
+                <h2 class='about__title'>0.1 About me</h2>
+                <div class='about__paras'> 
+                    <p class='about__para-bottom'>
+                    I am Dmitry, a passionate <b>DevOps Cloud Engineer and Programmer</b>. My coding 
+                    journey began in 2012 when I started learning how to code. Initially, I built 
+                    websites using JavaScript for small businesses. However, I found particular joy
+                    in developing a digital piano project due to the logical thinking involved.
+                    </p>
+                    <p class='about__para-bottom'>
+                    Over time, I have honed my skills in<b> analyzing complex systems, scripting, automation</b>,
+                    and implementing effective solutions to optimize cloud-based environments. Creating 
+                    <b> CI/CD pipelines and processes for development</b> is an area of expertise for me. Additionally,
+                    I possess proficiency in designing, implementing, and managing <b>virtual networks within Azure,</b> 
+                    configuring components such as <b>Express Route, VPN Gateways, DNS, and Load Balancers.</b>
+                    </p>
+                    <p class='about__para-bottom'> 
+                    In terms of certifications, I have successfully completed and obtained Microsoft certifications
+                    for <b>AZ-900 Azure Fundamentals, AZ-104 Azure Administrator Associate, and AZ-400 DevOps Engineer</b>. 
+                    These certifications validate my knowledge and expertise in the Azure ecosystem, allowing me to provide 
+                    comprehensive solutions and services in cloud computing and DevOps practices.
+                    </p>     
+                </div>
+            </div>
+            <div class='about__second'>
+                <picture class='about_picture'>
+                    <div class='about__block'></div>
+                    <img src="{% static "images/me.jpg" %}" alt='Me' />
+                </picture>
             </div>
         </div>
-    
+
+        
+    </div>
+    <div className='edge'>
+        </div>
+    </section>
 {% endblock %}
