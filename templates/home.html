@@ -71,5 +71,169 @@
     </div>
     <div className='edge'>
         </div>
-    </section>
+</section>
+
+<section id="skills" class='skills'>
+        <div class='skills__inner container'>
+        <h2 class='skills__title'>0.2 Skills & Technologies</h2>
+    <div class='skill__all'>
+    <div class='skills__tech'>
+        <div class='devicon--box'>
+            <i class="devicon devicon-html5-plain"></i> 
+            <p>HTML5</p>
+        </div>
+        <div class='devicon--box'>
+        <i class="devicon devicon-css3-plain"></i> 
+            <p>CSS</p>
+        </div>
+        <div class='devicon--box'> 
+        <i class="devicon devicon-sass-original"></i>
+            <p>SASS</p>
+        </div>
+        <div class='devicon--box'> 
+        <i class="devicon devicon-javascript-plain"></i>
+            <p>JavaScript</p>
+        </div>
+        <div class='devicon--box'> 
+        <i class="devicon devicon-react-original"></i>
+            <p>React JS</p>
+        </div>
+        <div class='devicon--box'> 
+        <i class="devicon devicon-redux-original"></i>
+            <p>Redux</p>
+        </div>
+        <div class='devicon--box'> 
+        <i class="devicon devicon-typescript-plain"></i>
+            <p>TypeScript</p>
+        </div>
+        <div class='devicon--box'> 
+        <i class="devicon devicon-git-plain"></i>
+            <p>Git</p>
+        </div>
+        <div class='devicon--box'> 
+        <i class="devicon devicon-nodejs-plain"></i>
+            <p>Node JS</p>
+        </div>
+        <div class='devicon--box'> 
+        <i class="devicon devicon-mongodb-plain"></i>
+            <p>MongoDB</p>
+        </div>
+        <div class='devicon--box'> 
+        <i class="devicon devicon-python-plain"></i>
+            <p>Python</p>
+        </div>
+    </div>
+    <div class='ver-line'></div>
+    <div class='skills__add'>
+        <div class='devicon--box'> 
+            <i class="devicon devicon-jenkins-line"></i>
+            <p>Jenkins</p>
+        </div>
+        <div class='devicon--box'> 
+            <i class="devicon devicon-azure-plain"></i>
+            <p>Azure</p>
+        </div>
+        <div class='devicon--box'> 
+            <i class="devicon devicon-figma-plain"></i>
+            <p>Figma</p>
+        </div>   
+        <div class='devicon--box'> 
+            <i class="devicon devicon-docker-plain"></i>
+            <p>Docker</p>
+        </div>
+        <div class='devicon--box'>  
+            <i class="devicon devicon-terraform-plain"></i>
+            <p>Terraform</p>
+        </div>
+        <div class='devicon--box'>  
+            <i class="devicon devicon-kubernetes-plain"></i>
+            <p>Kubernetes</p>
+        </div>
+        <div class='devicon--box'>  
+            <i class="devicon devicon-linux-plain"></i>
+            <p>Linux</p>
+        </div>
+        
+
+    </div>
+    </div>
+
+        </div> 
+</section>
+
+
+<section id="exp" class'exp '>
+    <div class'exp__inner container'>
+      <h2 class'exp__title'>0.3 Experience</h2>
+<div class'exp__content'>
+      <div class'exp__jobs'>
+        <div class'exp__comp'>
+          
+            <div 
+            class{toggle === 1 ? "exp__company active--tab" : "exp__company"}
+            onClick={() => toggleTab(1)}
+            >TD Brands LLC</div> 
+          
+            <div
+            class={toggle === 2 ? "exp__company active--tab" : "exp__company"}
+            onClick={() => toggleTab(2)}
+            >NY Popular</div>
+
+            <div
+            class={toggle === 3 ? "exp__company active--tab" : "exp__company"}
+            onClick={() => toggleTab(3)}
+            >The Wild Flower Group</div>
+          
+        </div>
+
+        <div class='exp__divider choose'></div>
+        
+
+        <div class='jobs'>
+               <div class={toggle === 1 ? "exp__desc active--content" : "exp__desc"}>
+                <p class='exp__job--name'> Self-Employed</p>
+                  <small class='exp__year'>May 2020 - Present</small>
+                  <p class='exp__about'>
+
+                  • Streamlining and managing verbal and written communications across hosting companies, clients, and vendors to
+                 ensure effective collaboration and customer satisfaction.<br/>
+• Conducting meetings with prospective clients to assess websites and gather detailed specifications for new or
+existing projects.<br/>
+• Creating and implementing the front-end of websites by leveraging HTML5, CSS3, jQuery, and ReactJS.<br/>
+• Developed, managed, and optimized digital campaigns across multiple platforms, including Google Ads Paid
+Search, Display, Video, and Facebook Business Manager.  <br/>
+                     
+                 </p>
+            </div>
+            <div class={toggle === 2 ? "exp__desc active--content" : "exp__desc"}>
+                <p class='exp__job--name'>Full-Stack Digital Marketing </p>
+                <small class='exp__year'>May 2017 - May 2023</small>
+                <p class='exp__about'>
+                • Designing, developing, and testing the web application by using the HTML5, CSS3, Bootstrap, React JS and
+Redux.<br/>
+• Developed and managed Amazon Sponsored Ads Campaigns with monthly budget $100.000+ and generated
+$600.000+ with 16% ACoS.<br/>
+• Collaborated with team to quickly resolve customer complaints with appropriate action.<br/>
+                </p>
+            </div>
+            <div class={toggle === 3 ? "exp__desc active--content" : "exp__desc"}>
+                <p class='exp__job--name'>Front-end Developer </p>
+                <small class='exp__year'>January 2023 - March 2023</small>
+                <p class='exp__about'>
+                • Developed and testing Shopify theme by using Liquid, Javascript, CSS, React Js.<br/>  
+                • Improved user experience and website speed by 25%, increased website traffic by 15%.<br/>
+                • Managed paid digital marketing campaigns across Google ads, Google Shopping, Meta ads.<br/> 
+                • Debugging existing websites to increase performance, reducing overall load time.<br/> 
+                • Deploying finished website to hosting using FTP port number 21.<br/>
+                • Setting up and managing DNS (Domain Name System) configurations.<br/>
+                </p>
+            </div>
+        
+         </div>
+      </div>
+      </div>
+    </div>
+
+</section>
+
 {% endblock %}

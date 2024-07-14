@@ -385,8 +385,196 @@
             animation-delay: 17.5s;
   }
   
-  
-  
+
+
+  /* Skills and Tech */
+
+
+.skills{
+    background-color: #0A192F;
+    color: #fff;
+    font-family: inherit;
+    
+    
+    
+}
+
+.container{
+    max-width: 150rem;
+    margin: 0 auto;
+}
+
+.skills__title{
+    padding-top: 3rem;
+    font-size: 2rem;
+    padding-bottom: 1.3rem;
+    font-weight: 400;
+}
+
+.skill__all{
+    display: flex;
+    justify-content: space-between;
+    padding: 6.8rem 0 8.6rem 0;
+    
+    
+}
+
+.skills__tech{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 60rem;
+    height: 17rem;
+}
+
+.skills__add{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 50rem;
+}
+
+.devicon{
+    font-size:5rem;
+}
+.devicon--box{
+    width: 12%;
+    text-align: center;
+}
+
+.devicon--box p:first-of-type {
+    font-size: 1.4rem;
+    padding-top: 1rem;
+    font-family: 'Jura', sans-serif;
+}
+
+
+.ver-line{
+    height: 18rem;
+    width: .2rem;
+    background-color: #fff;
+    margin: 0 1rem ;
+
+}
+
+
+/* Experience */
+.exp{
+    color: #000;
+    padding: 6.8rem 0 3.6rem 0;
+    max-width: 150rem;
+    margin: 0 auto;
+    
+}
+
+
+.exp__content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.exp__desc{
+    padding-top: 3rem;
+    display: none;
+    /* width: 90rem; */
+}
+
+.exp__jobs{
+    display: flex;
+    gap: 3rem;
+    
+}
+
+.exp__comp{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 3rem;
+}
+
+.exp__company{
+    background: none;
+    border: none;
+    
+    font-size: 1.6rem;
+   
+    cursor: pointer;
+    
+}
+
+.exp__company.active--tab{
+    font-weight: 800;
+}
+
+
+.exp__title{
+    font-family: 'Jura', sans-serif;
+    font-size: 2rem;
+    padding-bottom: 1.3rem;
+    font-weight: 500;
+
+}
+
+.active--tab{
+    display: block;
+    position: relative;
+    color: #000;
+}
+
+.active--tab::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    right: -33px;
+    height: 4rem;
+    width: 0.4rem;
+    background-color: aquamarine;
+    z-index: 99;
+   
+  }
+
+.active--content{
+    display: block;
+    
+}
+
+.job--none{
+    display: none;
+}
+
+.exp__divider{
+    height: 24rem;
+    width: .1rem;
+    background-color: #939393;
+    float: right;
+    position: relative;
+}
+
+
+
+.exp__job--name{
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Tahoma', sans-serif;
+    padding-bottom: .7rem;
+}
+
+.exp__year{
+    display: block;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+}
+
+.exp__about{
+    font-family: 'Tahoma';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    max-width: 80rem;
+}
   
   
   @-webkit-keyframes rotate-word {
