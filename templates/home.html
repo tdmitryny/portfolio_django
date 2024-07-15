@@ -5,7 +5,7 @@
 
 {% block content %}
     {% comment %} Hero section {% endcomment %}
-<section class="hero">
+<section class="hero ">
     <div class="container">
         <div class="hero__inner">
             <span class="hero__welcome">Hello 👋🏻, I’m </span>
@@ -32,7 +32,7 @@
         </div>
     </div>
 </section>
-<section>
+<section class="container">
     <div class='about'>
         <div class='about__inner'>
             <div class='about__first'>
@@ -162,27 +162,18 @@
 </section>
 
 
-<section id="exp" class'exp '>
-    <div class'exp__inner container'>
-      <h2 class'exp__title'>0.3 Experience</h2>
-<div class'exp__content'>
-      <div class'exp__jobs'>
-        <div class'exp__comp'>
+<section id="exp" class='exp '>
+    <div class='exp__inner container'>
+      <h2 class='exp__title'>0.3 Experience</h2>
+<div class='exp__content'>
+      <div class='exp__jobs'>
+        <div class='exp__comp'>
           
-            <div 
-            class{toggle === 1 ? "exp__company active--tab" : "exp__company"}
-            onClick={() => toggleTab(1)}
-            >TD Brands LLC</div> 
+            <div class="exp__company active--tab">TD Brands LLC</div> 
           
-            <div
-            class={toggle === 2 ? "exp__company active--tab" : "exp__company"}
-            onClick={() => toggleTab(2)}
-            >NY Popular</div>
+            <div class="exp__company">NY Popular</div> 
 
-            <div
-            class={toggle === 3 ? "exp__company active--tab" : "exp__company"}
-            onClick={() => toggleTab(3)}
-            >The Wild Flower Group</div>
+            <div class="exp__company">The Wild Flowers</div> 
           
         </div>
 
@@ -190,7 +181,7 @@
         
 
         <div class='jobs'>
-               <div class={toggle === 1 ? "exp__desc active--content" : "exp__desc"}>
+               <div class="exp__des active--content">
                 <p class='exp__job--name'> Self-Employed</p>
                   <small class='exp__year'>May 2020 - Present</small>
                   <p class='exp__about'>
@@ -205,7 +196,7 @@ Search, Display, Video, and Facebook Business Manager.  <br/>
                      
                  </p>
             </div>
-            <div class={toggle === 2 ? "exp__desc active--content" : "exp__desc"}>
+            <div class="exp__des job--none">
                 <p class='exp__job--name'>Full-Stack Digital Marketing </p>
                 <small class='exp__year'>May 2017 - May 2023</small>
                 <p class='exp__about'>
@@ -216,7 +207,7 @@ $600.000+ with 16% ACoS.<br/>
 • Collaborated with team to quickly resolve customer complaints with appropriate action.<br/>
                 </p>
             </div>
-            <div class={toggle === 3 ? "exp__desc active--content" : "exp__desc"}>
+            <div class="exp__des job--none">
                 <p class='exp__job--name'>Front-end Developer </p>
                 <small class='exp__year'>January 2023 - March 2023</small>
                 <p class='exp__about'>
@@ -235,5 +226,72 @@ $600.000+ with 16% ACoS.<br/>
     </div>
 
 </section>
+
+<section id="work" class='port'>
+    <div class='port__inner container'>
+        <h2 class='port__title'>0.4 My Recent Work</h2>
+        <div class='ports'>
+            <div class='ports__main'>
+
+                <img class='ports__img' src="{% static "images/mattress.jpg" %}" alt='Mattresses reviews' />
+                <div class='port__menu'>
+                            <div class='pro__tools'>
+                                <i class="dev_size devicon devicon-html5-plain-wordmark"></i>
+                                <i class="dev_size devicon devicon-css3-plain-wordmark"></i>
+                                <i class="dev_size devicon devicon-javascript-plain"></i>
+                            </div>
+                            <div class='port__block'>
+                                <a href='https://github.com/tdmitryny/mattresses-reviews' class='link__btn' target="_blank" rel="noreferrer" >Github</a>
+                                <a href='https://tdmitryny.github.io/mattresses-reviews/' class='link__btn' target="_blank" rel="noreferrer" >Website</a>
+                            </div>
+                </div>
+            </div>
+            <div class='ports__main'>
+                <img class='ports__img' src="{% static "images/microgreen.jpg" %}" alt='Microgreens' />
+                <div class='port__menu'>
+                <div class='pro__tools'>
+                    <i class="dev_size devicon devicon-react-original-wordmark"></i>
+                    <i class="dev_size devicon devicon-css3-plain-wordmark"></i>
+                    <i class="dev_size devicon devicon-redux-original"></i>
+                </div>
+      
+      
+                <div class='port__block'>
+                        <a href='https://github.com/tdmitryny/The-Better-Task' class='link__btn' target="_blank" rel="noreferrer" >Github</a>
+                        <a href='https://tdmitryny.github.io/The-Better-Task/' class='link__btn' target="_blank" rel="noreferrer" >Website</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            </div>
+                   
+        </div>
+    </section>
+
+<section class="container">
+   <div class='blog__space'> 
+    <h2 class='port__title'>0.5 Blog</h2>
+    <div class="blog__home">
+        <div class="blog__home--prev">
+            <img src="{% static "images/me.jpg" %}" alt="prev" />
+            <a  href="{% url 'post' %}" class="blog__home>"> <h2 class="blog__home--title">Blog One</h2></a>
+            <p class="blog__home--para">I write about my journey in tech, programming, and cloud computing. Check out my latest blog posts.</p>
+            <a class="link__btn read" href="{% url 'post' %}" class="blog__home>">Read More</a>
+        </div>
+        <div class="blog__home--prev">
+            <img src="{% static "images/me.jpg" %}" alt="prev" />
+            <a href="{% url 'post' %}" class="blog__home>"><h2 class="blog__home--title">Blog two</h2></a>
+            <p class="blog__home--para">I write about my journey in tech, programming, and cloud computing. Check out my latest blog posts.</p>
+            <a class="link__btn read" href="{% url 'post' %}" class="blog__home>">Read More</a>
+        </div>
+        <div class="blog__home--prev">
+            <img src="{% static "images/me.jpg" %}" alt="prev" />
+            <a href="{% url 'post' %}" class="blog__home>"><h2 class="blog__home--title">Blog three</h2></a>
+            <p class="blog__home--para">I write about my journey in tech, programming, and cloud computing. Check out my latest blog posts.</p>
+            <a class="link__btn read" href="{% url 'post' %}" class="blog__home>">Read More</a>
+        </div>
+    </div>
+</section> 
 
 {% endblock %}
