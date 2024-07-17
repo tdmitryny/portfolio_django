@@ -3,5 +3,10 @@
 
 
 {% block content %}
-    <h1 class="all">BLYA</h1>
+{% for post in posts %}
+    <span class="all">{{ post.author}}</span>
+    <h2>{{ post.title}}</h2>
+    <p>content</p>
+    <small>date</small>
+{% endfor %}
 {% endblock %}

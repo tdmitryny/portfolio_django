@@ -73,17 +73,18 @@
     {% endblock %}
 </main>
 
-<footer class="container footer">
+<footer class="footer">
+    <div class="container">
     <div class="footer__inner">
         <div class="footer__icons">
             <a href="https://www.linkedin.com/in/john-doe-123456789/" target="__blank" rel="noreferrer">
-                <img src={% static "images/linkedin.svg" %}>
+                <img class="change-my-color" src={% static "images/linkedin.svg" %}>
             </a>
             <a href="https://www.linkedin.com/in/john-doe-123456789/" target="__blank" rel="noreferrer">
-                <img src={% static "images/instagram.svg" %}>
+                <img class="change-my-color" src={% static "images/instagram.svg" %}>
             </a>
             <a href="https://www.linkedin.com/in/john-doe-123456789/" target="__blank" rel="noreferrer">
-                <img src={% static "images/github.svg" %}>
+                <img  class="change-my-color" src={% static "images/github.svg" %}>
             </a>
         </div>
         <div class="footer__copy">
@@ -95,6 +96,8 @@
             <a href="#">Terms of Service</a>
         </div>
     </div>
+</div>
+
 </footer>
 <script rel="text/javascript" src="{% static "js/script.js" %}"></script>
 </html>
