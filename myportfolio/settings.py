@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
-    'django_sass', # Add this line to the list of installed apps
+    'django_sass',
+    'tinymce', 
     
 ]
 

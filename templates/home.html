@@ -273,15 +273,17 @@ $600.000+ with 16% ACoS.<br/>
    <div class='blog__space'> 
     <h2 class='port__title title'>0.5 Blog</h2>
     <div class="blog__home">
+
+    {% for post in posts %}
         <div class="blog__home--prev">
             <div class="blog__home--img">
                 <img src="{% static "images/me.jpg" %}" alt="prev" />
             </div>
-            <a  href="{% url 'post' %}" class="blog__home>"> <h2 class="blog__home--title">Blog One</h2></a>
-            <p class="blog__home--para">I write about my journey in tech, programming, and cloud computing. Check out my latest blog posts.</p>
+            <a  href="{% url 'post' %}" class="blog__home>"> <h2 class="blog__home--title">{{ post.title }}</h2></a>
+            <p class="blog__home--para">{{ post.content | truncatewords_html:30|safe }}</p>
             <a class="link__btn read" href="{% url 'post' %}" class="blog__home>">Read More</a>
         </div>
-        <div class="blog__home--prev">
+        {% comment %} <div class="blog__home--prev">
             <div class="blog__home--img">
               <img src="{% static "images/me.jpg" %}" alt="prev" />
             </div>
@@ -296,10 +298,10 @@ $600.000+ with 16% ACoS.<br/>
             <a href="{% url 'post' %}" class="blog__home>"><h2 class="blog__home--title">Blog three</h2></a>
             <p class="blog__home--para">I write about my journey in tech, programming, and cloud computing. Check out my latest blog posts.</p>
             <a class="link__btn read" href="{% url 'post' %}" class="blog__home>">Read More</a>
-        </div>
+        </div> {% endcomment %}
         
        
-          
+    {% endfor %}   
     </div>
 </section> 
 
