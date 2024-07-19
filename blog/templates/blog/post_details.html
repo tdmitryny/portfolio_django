@@ -3,10 +3,9 @@
 
 
 {% block content %}
-{% for object in object_list %}
+
     <h1>{{object.title}}</h1>
     <p>Published on {{object.date}}</p>
     <p>{{object.content}}</p>
-{% endfor %}
 
 {% endblock %}
