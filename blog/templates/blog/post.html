@@ -3,10 +3,8 @@
 
 
 {% block content %}
-
-    <span class="all">post.author</span>
-    <h2>post.title</h2>
-    <p>content</p>
-    <small>date</small>
+<h1>{{object.title}}</h1>
+<p>Published on {{object.date}}</p>
+<p>{{object.content}}</p>
 
 {% endblock %}

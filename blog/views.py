@@ -6,31 +6,14 @@ from django.views.generic import ListView, DetailView
 
 
 
-# posts = [
-#     {
-#         'author': 'CoreyMS',
-#         'title': 'Blog Testings',
-#         'content': 'First post content',
-#         'date_posted': 'August 27, 2018'
-#     },
-#      {
-#         'author': 'Alex',
-#         'title': 'New Testings',
-#         'content': 'Second post content',
-#         'date_posted': 'September 27, 2018'
-#     }
-# ]
 
-def home(request):
+class PostListView(ListView):
     model = Post
-    context = {'posts' : Post.objects.all()}
-    return render(request, 'home.html', context)
-
-def post(request):
-    contex = 's'
-    return render(request, 'blog/post.html', contex)
-
-# class Post(ListView):
-#     model = Post
-#     context = Post.objects.all()
-#     blog = 'home.html'
+    context = Post.objects.all().order_by('-date')
+    template_name = 'home.html'
+    paginate_by = 10
+    
+class PostDetailView(DetailView):
+    model = Post
+    template_name = 'blog/post.html'
+    

@@ -274,34 +274,42 @@ $600.000+ with 16% ACoS.<br/>
     <h2 class='port__title title'>0.5 Blog</h2>
     <div class="blog__home">
 
-    {% for post in posts %}
+    {% for object in object_list %}
         <div class="blog__home--prev">
             <div class="blog__home--img">
-                <img src="{% static "images/me.jpg" %}" alt="prev" />
+
+                {% if object.image %}
+                    <img src="{{ object.image.url }}" alt="prev" />
+                {% else %}
+                    <img src="{% static "images/default.webp" %}" alt="prev" />
+               {% endif %}
+               
+                {% comment %} <img src="{{ object.image.url }}" alt="prev" /> {% endcomment %}
             </div>
-            <a  href="{% url 'post' %}" class="blog__home>"> <h2 class="blog__home--title">{{ post.title }}</h2></a>
-            <p class="blog__home--para">{{ post.content | truncatewords_html:30|safe }}</p>
-            <a class="link__btn read" href="{% url 'post' %}" class="blog__home>">Read More</a>
-        </div>
-        {% comment %} <div class="blog__home--prev">
-            <div class="blog__home--img">
-              <img src="{% static "images/me.jpg" %}" alt="prev" />
-            </div>
-            <a href="{% url 'post' %}" class="blog__home>"><h2 class="blog__home--title">Blog two</h2></a>
-            <p class="blog__home--para">I write about my journey in tech, programming, and cloud computing. Check out my latest blog posts.</p>
-            <a class="link__btn read" href="{% url 'post' %}" class="blog__home>">Read More</a>
-        </div>
-        <div class="blog__home--prev">
-            <div class="blog__home--img">
-                <img src="{% static "images/me.jpg" %}" alt="prev" />
-            </div>
-            <a href="{% url 'post' %}" class="blog__home>"><h2 class="blog__home--title">Blog three</h2></a>
-            <p class="blog__home--para">I write about my journey in tech, programming, and cloud computing. Check out my latest blog posts.</p>
-            <a class="link__btn read" href="{% url 'post' %}" class="blog__home>">Read More</a>
-        </div> {% endcomment %}
-        
-       
+            <a  href="#" class="blog__home>"> <h2 class="blog__home--title">{{ object.title }}</h2></a>
+            <p class="blog__home--para">{{ object.content | truncatewords_html:30|safe }}</p>
+            <b>{{ object.date }}</b>
+            <a class="link__btn read" href="{% url 'post-detail' object.id %}" class="blog__home>">Read More</a>
+        </div>  
     {% endfor %}   
+
+    <div>
+        <div>
+            {% if page_obj.has_previous %}
+                <a href="?page=1">First</a>
+                <a href="?page={{ page_obj.previous_page_number }}">&laquo;</a>
+                <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+            <div>
+                <a href="#">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</a>
+            </div>
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">&raquo;</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+            {% endif %}
+       
+        </div>  
+    </div>
     </div>
 </section> 
 
