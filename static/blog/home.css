@@ -706,7 +706,7 @@
 .blog__home--title{
     font-family: 'Jura', sans-serif;
     font-size: 2rem;
-    padding-bottom: 1.3rem;
+    padding-bottom: .3rem;
     font-weight: bold;
     padding-top: 1rem;
 }
@@ -733,12 +733,55 @@
     
 } */
 
+.data__link{
+    font-size: 1.5rem;
+}
+
+.date__font{
+    padding-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.data__link:link{
+    color: #0b0c0b;
+}
+
+.data__link:visited{
+    color: #0b0c0b;
+}
+
+
 .blog__home--img img{
     width: 100%;
     height: 30rem;
     object-fit: cover;
 }
 
+
+/* Block */
+
+.block{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center
+}
+
+.block_pages{
+    margin-top: 1.5rem;
+}
+
+
+.block__link{
+    font-size: 1.5rem;
+}
+
+.block__link:link{
+    color: #0b0c0b;
+}
+
+.block__link:visited{
+    color: #0b0c0b;
+}
 
 
   @-webkit-keyframes rotate-word {

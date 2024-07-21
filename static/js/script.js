@@ -16,3 +16,5 @@ companyExp.forEach((company, index) => {
         jobExps[index].classList.add('active--content');
     });
 });
+
+

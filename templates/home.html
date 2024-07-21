@@ -277,7 +277,7 @@ $600.000+ with 16% ACoS.<br/>
     {% for object in object_list %}
         <div class="blog__home--prev">
             <div class="blog__home--img">
-
+                <a class="data__link" href="{% url 'post-detail' object.id %}" class="blog__home>">
                 {% if object.image %}
                     <img src="{{ object.image.url }}" alt="prev" />
                 {% else %}
@@ -286,31 +286,42 @@ $600.000+ with 16% ACoS.<br/>
                
                 {% comment %} <img src="{{ object.image.url }}" alt="prev" /> {% endcomment %}
             </div>
-            <a  href="#" class="blog__home>"> <h2 class="blog__home--title">{{ object.title }}</h2></a>
-            <p class="blog__home--para">{{ object.content | truncatewords_html:30|safe }}</p>
-            <b>{{ object.date }}</b>
+            
+                <h2 class="blog__home--title">{{ object.title }}</h2>
+                <p class="date__font">{{ object.date}}</p>
+            </a>
+            <div class="blog__home--para">{{ object.content|truncatewords_html:30|safe }}</div>
             <a class="link__btn read" href="{% url 'post-detail' object.id %}" class="blog__home>">Read More</a>
         </div>  
     {% endfor %}   
 
-    <div>
-        <div>
+   
+    </div>
+    <a id="my-anchor"></a>
+<div class="block">
+    <div class="block_inner">
+        <div class="block_first">
             {% if page_obj.has_previous %}
-                <a href="?page=1">First</a>
-                <a href="?page={{ page_obj.previous_page_number }}">&laquo;</a>
-                <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                <a class="block__link" href="?page=1#my-anchor">First</a>
+                <a class="block__link" href="?page={{ page_obj.previous_page_number }}#my-anchor">&laquo;</a>
+                <a class="block__link" href="?page={{ page_obj.previous_page_number }}#my-anchor">Previous</a>
             {% endif %}
-            <div>
-                <a href="#">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</a>
-            </div>
-            {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}">&raquo;</a>
-                <a href="?page={{ page_obj.paginator.num_pages }}">Last</a>
-            {% endif %}
-       
-        </div>  
-    </div>
-    </div>
+        </div>
+        <div class="block_second">
+        {% if page_obj.has_next %}
+            <a class="block__link"  href="?page={{ page_obj.next_page_number }}#my-anchor">Next</a>
+            <a class="block__link"  href="?page={{ page_obj.next_page_number }}#my-anchor">&raquo;</a>
+            <a class="block__link"  href="?page={{ page_obj.paginator.num_pages }}#my-anchor">Last</a>
+        {% endif %}
+        </div>
+        
+        <div class="block_pages">
+            <a class="block__link"  href="#my-anchor">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</a>
+        </div>
+    </div>  
+</div>
+
+
 </section> 
 
 {% endblock %}
