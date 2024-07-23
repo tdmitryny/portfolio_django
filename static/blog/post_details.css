@@ -1,0 +1,37 @@
+.container_blog {
+    /* 1140px */
+    max-width: 120rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+}
+
+.blog__post--wrap{
+    display: flex;
+    flex-direction: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+
+/* Detail post */
+.blog__inner--detail{
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0;
+
+}
+.blog__home--para{
+    line-height: 1.6;
+}
+
+
+.blog-title{
+    font-size: 3.5rem;
+    font-weight: 700;
+    
+}
+
+.blog--date{
+    margin-bottom: 4rem;
+}

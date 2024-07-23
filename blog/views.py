@@ -18,7 +18,7 @@ class PostListDetailsView(ListView):
     model = Post
     context = Post.objects.all().order_by('-date')
     template_name = 'blog/post.html'
-    paginate_by = 10
+    paginate_by = 4
     
     
     

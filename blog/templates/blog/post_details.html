@@ -1,11 +1,16 @@
 {% extends 'base.html'%}
-
+{% load static %}
 
 
 {% block content %}
-
-    <h1>{{object.title}}</h1>
-    <p>Published on {{object.date}}</p>
-    <p>{{object.content}}</p>
+<section class="container_blog">
+    <div class="blog__inner--detail">
+        <div class="post--details">
+            <h2 class="blog__home--title blog-title">{{ object.title }}</h2>
+            <p class="date__font blog--date">{{ object.date}}</p>
+            <div class="blog__home--para">{{ object.content|safe }}</div>
+        </div>
+    </div>
+<selection>
 
 {% endblock %}
