@@ -25,4 +25,7 @@ class PostListDetailsView(ListView):
 class PostDetailView(DetailView):
     model = Post
     template_name = 'blog/post_details.html' #Can be changed to post_detail.html
+
+class ContactView(ListView):
+    pass
     
