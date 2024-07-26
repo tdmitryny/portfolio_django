@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django_sass',
     'tinymce', 
     
+    
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+DEFAULT_FROM_EMAIL = "dmitry@bicloudsolutions.com"
+NOTIFY_EMAIL = "dmitry@bicloudsolutions.com"
