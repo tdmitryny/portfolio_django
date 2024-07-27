@@ -32,8 +32,8 @@ class PostDetailView(DetailView):
     template_name = 'blog/post_details.html' #Can be changed to post_detail.html
 
 
-class SuccessView(ListView):
-    template_name = "success.html"
+class SuccessView(TemplateView):
+    template_name = 'success.html'
     
 
 
