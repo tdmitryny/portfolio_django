@@ -2,13 +2,22 @@
 {% load static %}
 
 {% block content %}
-<h1>Contact Us</h1>
-<form method="post">
-  {% csrf_token %}
-  {{ form }}
-  <div class="form-actions">
-    <button type="submit">Send</button>
+
+<div class="container_blog">
+  <div class="blog__post--wrap">
+    <div class="contact-form">
+        <h1>Contact Us</h1>
+        <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+          <div class="form-actions">
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </div>
   </div>
-</form>
+</div> 
+
+
 
 {% endblock %}

@@ -785,6 +785,15 @@
 }
 
 
+/* Contact */
+
+.form-email{
+    padding: 6.8rem 0 3.6rem 0;
+    background-color: #0A192F;
+    color: #fff;
+}
+
+
   @-webkit-keyframes rotate-word {
     0% {
       opacity: 0;
