@@ -129,6 +129,7 @@
 /* Footer */
 
 .footer{
+    
     background-color: #0A192F;
     color: #fff;
 }
@@ -660,6 +661,7 @@
     margin: 0 1rem 0 0;
     padding: 0 1.4em;
     transition: .2s ease-in;
+    cursor: pointer;
 
 }
 
@@ -787,11 +789,34 @@
 
 /* Contact */
 
-.form-email{
-    padding: 6.8rem 0 3.6rem 0;
-    background-color: #0A192F;
-    color: #fff;
+.form-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    margin: .5rem 0 .5rem;
+
 }
+
+
+.contact-title{
+    padding-bottom: 1.3rem;
+    
+}
+
+.container_blog{
+    min-height: 80vh;
+}
+
+.contact-form{
+   padding-top: 10rem;
+}
+
+label{
+    font-size: 1.5rem;
+}
+
+
 
 
   @-webkit-keyframes rotate-word {

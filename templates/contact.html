@@ -6,12 +6,12 @@
 <div class="container_blog">
   <div class="blog__post--wrap">
     <div class="contact-form">
-        <h1>Contact Us</h1>
+        <h1 class="contact-title">Send Request</h1>
         <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
           <div class="form-actions">
-          <button type="submit">Send</button>
+          <button type="submit" class="link__btn">Send</button>
         </div>
       </form>
     </div>
