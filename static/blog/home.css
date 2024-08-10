@@ -318,7 +318,8 @@
 
 .about__block{
     position: absolute;
-    width: 412px;
+    content: "";
+    width:412px;
     height: 307px;
     background: #C9F6C8;
     top: -28.5rem;

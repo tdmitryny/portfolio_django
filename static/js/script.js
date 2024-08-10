@@ -1,5 +1,7 @@
 const companyExp = document.querySelectorAll('.exp__company');
 const jobExps = document.querySelectorAll('.exp__des');
+const menu = document.querySelector('.drop_menu');
+
 
 companyExp.forEach((company, index) => {
     company.addEventListener('click', () => {
@@ -18,3 +20,10 @@ companyExp.forEach((company, index) => {
 });
 
 
+
+menu.addEventListener('click', () => {
+    const nav = document.querySelector('.header__menu-lists');
+    nav.classList.toggle('is-open');
+    menu.classList.toggle('is-open');
+    
+});
