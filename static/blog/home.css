@@ -310,13 +310,16 @@
 }
 
 .about_picture{
+    width: 100%;
     position: relative;
 }
 .about_picture img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
-.about__block{
+/* .about__block{
     position: absolute;
     content: "";
     width:412px;
@@ -325,7 +328,8 @@
     top: -28.5rem;
     left: 1rem;
     z-index: -1;
-}
+} */
+
 
 
 
